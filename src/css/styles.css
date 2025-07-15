@@ -23,7 +23,7 @@
     object-fit: cover;
     object-position: center;
 }
-.slide.active-slide{
+.slide.slide-active{
     opacity: 1;
 }
 
@@ -39,7 +39,11 @@
     background: transparent;
     top: 50%;
     transform: translateY(50%);
+    border: none;
     z-index: 2;
+    cursor: pointer;
+    color: lightpink;
+    background-color: rgba(169, 169, 169,0.2);
 }
 
 .carousel-button--prev{
@@ -52,5 +56,26 @@
 
 .carousel-nav{
     position:absolute;
-    bottom: 0;    
+    bottom: 1rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap:15px;
+    z-index: 2;
+}
+
+.carousel-nav--button{
+    background-color: hsl(351, 100%, 86%); 
+    height: 20px;
+    width: 20px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.carousel-nav--button.slide-active{
+    background-color: red;
+
 }
