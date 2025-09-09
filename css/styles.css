@@ -1,1 +1,93 @@
-/* Stylesheet */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity:0;
+    transition: 1000ms opacity ease-out;
+}
+
+.slide > img{
+    margin: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.slide.slide-active{
+    opacity: 1;
+}
+
+.carousel >ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li{
+    margin:0;
+    padding:0;
+}
+
+.carousel-button{
+    font-size: 4rem;
+    position: absolute;
+    background: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    color: lightpink;
+    background-color: rgba(169, 169, 169,0.2);
+}
+
+.carousel-button--prev{
+    left: 2rem;
+}
+
+.carousel-button--next{
+    right: 2rem;
+}
+
+.carousel-nav{
+    position:absolute;
+    bottom: 1rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    gap:15px;
+    z-index: 2;
+    background-color: rgba(169, 169, 169,0.35);
+    padding-inline: 20px;
+    border-radius: 25px;
+}
+
+.carousel-nav--button{
+    background-color: hsl(351, 100%, 86%); 
+    height: 20px;
+    width: 20px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.carousel-nav--button.slide-active{
+    background-color: red;
+
+}
